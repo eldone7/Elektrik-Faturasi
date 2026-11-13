@@ -1,0 +1,13 @@
+tuketim = float(input("Aylık harcanan (kWh): "))
+
+if tuketim < 0 :
+  print("Sayı negatif olamaz ")
+elif tuketim <= 150:
+    k_tuketim = tuketim * 1.50
+    print(f"Faturanız: {k_tuketim:.2f} TL")
+elif 150 < tuketim <=300:
+    o_tuketim = 150 * 1.50 + (tuketim - 150) * 2.20
+    print(f"Faturanız: {o_tuketim:.2f} TL")
+else:
+    b_tuketim = 150 * 1.5 + 150 * 2.20 + (tuketim - 300) * 3.00
+    print(f"Faturanız: {b_tuketim:.2f} TL")
